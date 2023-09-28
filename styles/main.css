@@ -22,13 +22,18 @@ h1,h2,h3,h4,h5,h6 {
 ul {
     list-style-type: none;
     padding-inline-start: 0.25rem;
+    background-color: rgb(189, 234, 251);
+    border: 1px dashed dodgerblue;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 600px;
 }
 
 #orderButton {
     margin: 1rem 0 2rem 2rem;
     padding: 0.5rem;
-    background-color: rgb(227, 72, 72);
-    color: lightgoldenrodyellow;
+    background-color: rgb(16, 120, 102);
+    color: rgb(255, 255, 255);
     font-size: 1rem;
 }
 

@@ -12,11 +12,15 @@ const technology = getTechnology()
 
 const buildOrderListItem = (order) => {
 
+    
     const foundColor = colors.find( color => color.id === order.paintColorId)
     const foundInterior = interiors.find( interior => interior.id === order.interiorId)
     const foundTechnology = technology.find( tech => tech.id === order.technologyId)
-    const foundWheels = wheels.find(wheel => wheel.id === order.wheelId)
+    const foundWheels = wheels.find( wheel => wheel.id === order.wheelId)
 
+    const colorName = foundColor.color
+    const interiorName = foundInterior.style
+    const techName = foundTechnology.package
     const totalCost = foundColor.price + foundInterior.price + foundTechnology.price 
 
     const costString = totalCost.toLocaleString("en-US", {
@@ -25,7 +29,7 @@ const buildOrderListItem = (order) => {
     })
 
     return `<li>
-    ${order.paintColorId} with ${order.wheelId}, ${order.interiorId} and the ${order.technologyId} for a total of ${costString}
+    ${colorName} with ${order.wheelId}, ${interiorName} and the ${techName} for a total of ${costString}
 </li>`
 }
 
@@ -42,3 +46,4 @@ export const Orders = () => {
 
     return html
 }
+
